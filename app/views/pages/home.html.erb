@@ -1,5 +1,7 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
-<%= current_user.email %> 
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
+<%= cl_image_tag("xabigbszdjozvrdnuo69",
+      width: 400, height: 300, crop: :fill) %>
+<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
