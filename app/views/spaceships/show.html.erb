@@ -1,2 +1,12 @@
-<h1>Spaceships#show</h1>
-<p>Find me in app/views/spaceships/show.html.erb</p>
+<h1><%= @spaceship.name %></h1>
+
+<%= @spaceship.description %>
+<h3>Price:</h3>
+<%= @spaceship.price %>
+<%= @spaceship.speed %>
+<%= @spaceship.number_of_seats %>
+<div class="" style="background-image: <% if @spaceship.photo.attached? %>
+    url('<%= cl_image_path @spaceship.photo.key, height: 300, width: 400, crop: :fill %>')
+    <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
+    <% end %>">
+</div>

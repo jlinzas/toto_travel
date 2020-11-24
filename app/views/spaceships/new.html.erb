@@ -1,2 +1,11 @@
 <h1>Spaceships#new</h1>
-<p>Find me in app/views/spaceships/new.html.erb</p>
+<%= simple_form_for [ @spaceship ] do |f| %>
+
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :speed, label: "Speed" %>
+  <%= f.input :number_of_seats, label: "Number of seats" %>
+  <%= f.input :price, label: "Price" %>
+  <%= f.input :description, label: "Description" %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Submit !", class: "btn btn-primary" %>
+<% end %>
