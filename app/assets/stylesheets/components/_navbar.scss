@@ -3,20 +3,23 @@
   position: relative;
   top: 0;
   position: sticky;
-  height: 25px;
+  height: 50px;
   width: 100%;
   background-color: $space-grblue;
   justify-content: center;
+  z-index: 1000;
 }
 
 .span1 {
   display: flex;
   position: absolute;
   top: 0;
+  min-height: 80px;
   width: 30%;
   background-color: $space-grblue;
   border-radius: 200px;
   justify-content: space-around;
+  align-items: center;
 }
 
 .span1 a i {
@@ -24,6 +27,7 @@
 }
 
 .glo {
+  font-size: 50px;
   color: $space-gray;
     &:hover {
     color: white;
@@ -33,6 +37,7 @@
 }
 
 .ast {
+  font-size: 50px;
   color: $space-gray;
     &:hover {
     color: white;
@@ -42,6 +47,7 @@
 }
 
 .roc {
+  font-size: 50px;
   color: $space-gray;
   &:hover {
     color: white;
