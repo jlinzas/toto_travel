@@ -10,4 +10,5 @@ class SpaceshipsController < ApplicationController
 
   def edit
   end
+
 end
