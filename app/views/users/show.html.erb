@@ -1,0 +1,8 @@
+<h3>Email :</h3>
+<%= @user.email %>
+<br>
+<br>
+<% @user.orders.each do |order| %>
+<p>Commande n°<%= order.id %></p>
+<p>Reserved at <%= order.created_at %></p>
+<% end %>

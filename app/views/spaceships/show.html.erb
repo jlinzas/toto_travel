@@ -10,6 +10,7 @@
   </div>
 </div>
 
+
     <% if @spaceship.photo.attached? %>
     <div class="spaceship"><%= cl_image_tag @spaceship.photo.key, height: 300, width: 400, crop: :fill %> </div>
     <% end %>
@@ -25,5 +26,6 @@
          alors plus grand, qui utiliserait les fusées Angara ou Zenith pour son lancement.<%= @spaceship.description %></p>
   </div>
   <button type="button" class="btn btn-outline-primary">Reservation</button>
+  <%= link_to "Reserve ton vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id), :method => :post %>
 </div>
 
