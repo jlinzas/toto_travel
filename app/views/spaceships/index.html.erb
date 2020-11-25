@@ -22,13 +22,12 @@
     <% @spaceships.each do |spaceship| %>
       <%= link_to spaceship_path(spaceship) do %>
         <div class="card" style="background-image: <% if spaceship.photo.attached? %>
-          url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :fill %>')
+          url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :scale %>')
           <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
           <% end %>">
-            <div class="card-body">
-            <h5 class="card-title"><%= spaceship.name %></h5>
-            <p class="card-price"><%= spaceship.price %>.</p>
-          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%= spaceship.name %></h5>
         </div>
       <% end %>
     <% end %>

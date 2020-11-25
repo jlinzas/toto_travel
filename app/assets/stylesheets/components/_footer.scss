@@ -8,6 +8,7 @@
   color: white;
   text-align: center;
   background-color: $space-grblue;
+  margin-top: 55px;
 }
 
 .list-inline-spatial {
@@ -22,19 +23,19 @@
 }
 
 .list-inline-spatial a i {
-    transition: 0.5s ease;
-  }
+  transition: 0.5s ease;
+}
 
 .list-inline-spatial .fb {
   font-size: 35px;
   text-decoration: none;
   opacity: 0.8;
   color: $space-gray;
-  animation : 7s neon 1s linear infinite;
+  animation: 7s neon 1s linear infinite;
   &:hover {
     color: white;
     transition: 0.5s ease;
-    text-shadow:(0px 0px 10px rgba(255, 255, 255, 0.9));
+    text-shadow: (0px 0px 10px rgba(255, 255, 255, 0.9));
   }
 }
 
@@ -43,11 +44,11 @@
   text-decoration: none;
   opacity: 0.8;
   color: $space-gray;
-  animation : 7s neon 1s linear infinite;
+  animation: 7s neon 1s linear infinite;
   &:hover {
     color: white;
     transition: 0.5s ease;
-    text-shadow:(0px 0px 10px rgba(255, 255, 255, 0.9));
+    text-shadow: (0px 0px 10px rgba(255, 255, 255, 0.9));
   }
 }
 
@@ -56,11 +57,11 @@
   text-decoration: none;
   opacity: 0.8;
   color: $space-gray;
-  animation : 7s neon 1s linear infinite;
+  animation: 7s neon 1s linear infinite;
   &:hover {
     color: white;
     transition: 0.5s ease;
-    text-shadow:(0px 0px 10px rgba(255, 255, 255, 0.9));
+    text-shadow: (0px 0px 10px rgba(255, 255, 255, 0.9));
   }
 }
 
@@ -69,10 +70,10 @@
   text-decoration: none;
   opacity: 0.8;
   color: $space-gray;
-  animation : 7s neon 1s linear infinite;
+  animation: 7s neon 1s linear infinite;
   &:hover {
     color: white;
     transition: 0.5s ease;
-    text-shadow:(0px 0px 10px rgba(255, 255, 255, 0.9));
+    text-shadow: (0px 0px 10px rgba(255, 255, 255, 0.9));
   }
 }
