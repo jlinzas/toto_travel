@@ -85,6 +85,22 @@
   opacity: 0.1;
 }
 
+.card-index {
+  background-color: rgba(250,250,250, 0.2);
+  color: white;
+  border-radius: 7px;
+  text-align: center;
+  width: 150px;
+  padding: 20px;
+  margin: 100px;
+}
+
+.card-body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .cards {
