@@ -1,5 +1,5 @@
 <div class="container-index">
-<h1>Bienvenu sur Toto Travel</h1>
+<h1>Bienvenue sur Toto Travel</h1>
 <p>L'agence de voyage avec 1500ans d'avance...</p>
 <form>
   <div class="form-row">
@@ -15,6 +15,7 @@
     </div>
   </div>
 </form>
+<h2><%= link_to "Proposer son vaisseau", new_spaceship_path %></h2>
 </div>
 <div class="container">
   <div class="cards">
@@ -26,16 +27,13 @@
           <% end %>">
             <div class="card-body">
             <h5 class="card-title"><%= spaceship.name %></h5>
-            <p class="card-text"><%= spaceship.description %>.</p>
             <p class="card-price"><%= spaceship.price %>.</p>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
-<% end %>
 
-<%= link_to "Proposer son vaisseau", new_spaceship_path %>
 
 </div>
 

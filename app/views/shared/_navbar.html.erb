@@ -1,7 +1,11 @@
 <div class="navbar-spatial">
   <span class="span1">
-    <a href="" class="home"><i class="roc fas fa-rocket"></i></a>
-    <a href="" class="profil"><i class="ast fas fa-user-astronaut"></i></a>
+    <%= link_to spaceships_path, class: "home" do %>
+    <i class="roc fas fa-rocket"></i>
+    <% end %>
+    <%= link_to user_path(current_user), class: "profil" do %>
+    <i class="ast fas fa-user-astronaut"></i>
+    <% end %>
     <a href="" class="log-in"><i class="glo fas fa-globe"></i></a>
   </span>
 </div>

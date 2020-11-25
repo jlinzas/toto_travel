@@ -3,7 +3,6 @@
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
-
 }
 
 .container-index p {
@@ -23,5 +22,7 @@
 }
 
 .container {
-  margin: 100px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
