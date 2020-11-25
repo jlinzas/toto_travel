@@ -1,6 +1,10 @@
 // Specific CSS for your home-page
 h1 {
-  color: $space-blue;
+  font-weight: lighter;
+  text-transform: uppercase;
+  animation: 10s neon 1s linear infinite;
+  color: $light-gray;
+  transition: 1s ease;
 }
 
 h2 {
