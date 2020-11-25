@@ -1,1 +1,14 @@
-
+@keyframes neon {
+  0%
+  {
+  filter: drop-shadow( 0px 0px 10px rgba(36,76,102,0.2));
+  }
+  50%
+  {
+  filter: drop-shadow( 0px 0px 10px blue);
+  }
+  100%
+  {
+  filter: drop-shadow( 0px 0px 10px rgba(36,76,102,0.2));
+  }
+}
