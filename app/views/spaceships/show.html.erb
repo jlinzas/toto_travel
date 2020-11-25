@@ -1,12 +1,29 @@
-<h1><%= @spaceship.name %></h1>
+<br>
+<h1 class="text-center"><%= @spaceship.name %></h1>
 
-<%= @spaceship.description %>
-<h3>Price:</h3>
-<%= @spaceship.price %>
-<%= @spaceship.speed %>
-<%= @spaceship.number_of_seats %>
-<div class="" style="background-image: <% if @spaceship.photo.attached? %>
-    url('<%= cl_image_path @spaceship.photo.key, height: 300, width: 400, crop: :fill %>')
-    <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
-    <% end %>">
+
+<div class="container">
+  <div class="cards-show">
+    <div class="card-show"><h3>Price:</h3><%= @spaceship.price %></div>
+    <div class="card-show"><h3>Speed:</h3><%= @spaceship.speed %></div>
+    <div class="card-show"><h3>Seats:</h3><%= @spaceship.number_of_seats %></div>
+  </div>
 </div>
+
+    <% if @spaceship.photo.attached? %>
+    <div class="spaceship"><%= cl_image_tag @spaceship.photo.key, height: 300, width: 400, crop: :fill %> </div>
+    <% end %>
+
+
+<div class="container show_bottom">
+  <div class="vide"></div>
+    <div class="card-show-description"><h3>Description:</h3>
+      <p>Kliper est un vaisseau spatial de 10 m de long pour un diamètre d'environ 3 m et conçu pour rester en orbite environ 10 jours.
+       D'une masse au lancement de 14,5 tonnes, il sera capable de transporter 2 pilotes et jusqu'à 4 passagers ou, pour la version cargo,
+        2 pilotes et jusqu'à 700 kg de charge utile. Energia travaille depuis 2000 à son développement.
+        Toutefois, sa conception remonte au début des années 90 quand la Russie envisageait un véhicule spatial,
+         alors plus grand, qui utiliserait les fusées Angara ou Zenith pour son lancement.<%= @spaceship.description %></p>
+  </div>
+  <button type="button" class="btn btn-outline-primary">Reservation</button>
+</div>
+
