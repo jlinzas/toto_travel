@@ -1,4 +1,13 @@
 <div class="container-index">
+  <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+    <h2>Flatpickr Demo</h2>
+
+    <%= simple_form_for :search, method: "get" do |f| %>
+      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+      <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 <h1>La vie est belle avec Toto travel</h1>
 <p>La garantie d'arriver à bon spatioport</p>
 <h2>Nous n'attendions plus que vous...</h2>
@@ -13,24 +22,43 @@
 <br>
 <br>
 </div>
-<div class="container">
-  <div class="cards">
-    <% @spaceships.each do |spaceship| %>
-      <%= link_to spaceship_path(spaceship) do %>
-        <div class="card" style="background-image: <% if spaceship.photo.attached? %>
-          url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :scale %>')
-          <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
-          <% end %>">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title"><%= spaceship.name %></h5>
-        </div>
+<% if params[:search].present? %>
+  <div class="container">
+    <div class="cards">
+      <% @spaceships.each do |spaceship| %>
+        <%= link_to spaceship_path(spaceship, :start_date => params[:search][:start_date], :end_date => params[:search][:end_date]) do %>
+          <div class="card" style="background-image: <% if spaceship.photo.attached? %>
+            url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :scale %>')
+            <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
+            <% end %>">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= spaceship.name %></h5>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
   </div>
+<% else %>
 
+  <div class="container">
+    <div class="cards">
+      <% @spaceships.each do |spaceship| %>
+        <%= link_to spaceship_path(spaceship) do %>
+          <div class="card" style="background-image: <% if spaceship.photo.attached? %>
+            url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :scale %>')
+            <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
+            <% end %>">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title"><%= spaceship.name %></h5>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 
-</div>
 
 <%# https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80 %>
 
