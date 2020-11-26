@@ -1,13 +1,17 @@
+
 <div class="container">
+  <div class="card-order-content">
+    <div class="card-order-content-title">
+      <h4>Ordered by: User.name</h4>
+      <%= @user.email %>
+      <% @user.orders.each do |order| %>
+      <br>
+      <p>Order n°<%= order.id %></p>
+      <br>
+      <p>Order created at <%= order.created_at %></p>
+      <% end %>
+    </div>
+    <div class="class-order-content-img" style="background-image: url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')">
+    </div>
+  </div>
 </div>
-<br>
-<br>
-<br>
-<h3>Email :</h3>
-<%= @user.email %>
-<br>
-<br>
-<% @user.orders.each do |order| %>
-<p>Commande n°<%= order.id %></p>
-<p>Reserved at <%= order.created_at %></p>
-<% end %>
