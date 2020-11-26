@@ -26,3 +26,31 @@
   justify-content: space-around;
   width: 100%;
 }
+
+form {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.form-control:hover {
+box-shadow: 0px 0px 20px blue;
+transition: 0.5s ease;
+}
+
+.container-show-description {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  max-width: 100%;
+  bottom: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 91px;
+}
+
+.container-user {
+  margin-top: 50px;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+}
