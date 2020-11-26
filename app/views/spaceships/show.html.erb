@@ -21,6 +21,6 @@
     <div class="card-show-description"><h3>Description:</h3>
       <p><%= @spaceship.description %></p>
   </div>
-  <%= link_to "Reserve ton vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id), :method => :post, class: "btn btn-outline-primary" %>
+  <%= link_to "Reserve ton vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id, :start_date => params[:start_date], :end_date => params[:end_date]), :method => :post, class: "btn btn-outline-primary" %>
 </div>
 

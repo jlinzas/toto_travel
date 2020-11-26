@@ -6,6 +6,8 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new()
     @spaceship = Spaceship.find(params[:spaceship])
+    @order.start_date= params[:start_date]
+    @order.end_date = params[:end_date]
     @order.spaceship = @spaceship
     @order.user = current_user
     if @order.save
@@ -15,4 +17,7 @@ class OrdersController < ApplicationController
     end
   end
 
+  # def order_params
+  #   params.require(:order).permit(:start_date, :end_date)
+  # end
 end

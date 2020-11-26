@@ -23,6 +23,7 @@ class SpaceshipsController < ApplicationController
 
   def edit
     @spaceship = Spaceship.find(params[:id])
+    @spaceships = Spaceship.all
   end
 
   private
