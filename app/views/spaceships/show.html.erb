@@ -4,9 +4,9 @@
 
 <div class="container">
   <div class="cards-show">
-    <div class="card-show"><h3>Price:</h3><h4><%= @spaceship.price %> €</h4></div>
-    <div class="card-show"><h3>Speed:</h3><h4><%= @spaceship.speed %></h4></div>
-    <div class="card-show"><h3>Seats:</h3><h4><%= @spaceship.number_of_seats %></h4></div>
+    <div class="card-show"><h3>Prix:</h3><h4><%= @spaceship.price %> €</h4></div>
+    <div class="card-show"><h3>Vitesse Max:</h3><h4><%= @spaceship.speed %></h4></div>
+    <div class="card-show"><h3>Nombre de sièges:</h3><h4><%= @spaceship.number_of_seats %></h4></div>
   </div>
 </div>
 
@@ -17,10 +17,12 @@
 
 
 <div class="container show_bottom">
-  <div class="vide"></div>
+  <div class="container-show-description">
     <div class="card-show-description"><h3>Description:</h3>
       <p><%= @spaceship.description %></p>
   </div>
-  <%= link_to "Reserve ton vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id, :start_date => params[:start_date], :end_date => params[:end_date]), :method => :post, class: "btn btn-outline-primary" %>
+  <div class="btn-reservation">
+  <%= link_to "Reservez votre vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id, :start_date => params[:start_date], :end_date => params[:end_date]), :method => :post, class: "btn-reservation" %>  </div>
+  </div>
 </div>
 

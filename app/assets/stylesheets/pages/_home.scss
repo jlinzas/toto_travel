@@ -1,13 +1,53 @@
 // Specific CSS for your home-page
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-weight: lighter;
   text-transform: uppercase;
   animation: 10s neon 1s linear infinite;
   color: $light-gray;
   transition: 1s ease;
+  margin-top: 50px;
 }
 
 h2 {
+  color: $space-grblue;
+  margin-bottom: 30px;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+      transition: 1s ease;
+  }
+}
+
+h2 a:hover {
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+  transition: 1s ease;
+}
+
+h3 {
+  color: $space-grblue;
+}
+
+h3 {
+  color: $space-grblue;
+}
+
+h4 {
   color: $space-grblue;
 }
 

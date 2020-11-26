@@ -1,4 +1,5 @@
 <div class="navbar-spatial">
+
   <span class="span1">
     <%= link_to spaceships_path, class: "home" do %>
       <i class="roc fas fa-rocket"></i>
@@ -14,4 +15,14 @@
     <% end %>
     <a href="" class="log-in"><i class="glo fas fa-globe"></i></a>
   </span>
+
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
+    <div class="btn-log-in"><h4>log-out</h4></div>
+  <% end %>
+    <% else %>
+    <%= link_to new_user_session_path, class: "nav-link" do %>
+    <div class="btn-log-in"><h4>log-in</h4></div>
+    <% end %>
+  <% end %>
 </div>

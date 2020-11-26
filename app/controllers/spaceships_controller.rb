@@ -1,7 +1,32 @@
 class SpaceshipsController < ApplicationController
+
   def index
-    @spaceships = Spaceship.all
+    if params[:query].present?
+
+      if params[:query][:name].present?
+        @spaceships = Spaceship.search_by_title(params[:query][:name])
+      else
+        @spaceships = Spaceship.all
+      end
+
+      if params[:query][:price].present?
+        @price_category = params[:query][:price]
+      else
+        @spaceships
+      end
+
+      if @price_category == "€"
+        @spaceships = @spaceships.where(price:0..1000)
+      elsif @price_category == "€€"
+        @spaceships = @spaceships.where(price:1000..10000)
+      elsif @price_category == "€€€"
+        @spaceships = @spaceships.where(price:10000..1000000)
+      end
+
+    else
+     @spaceships = Spaceship.all
   end
+end
 
   def new
     @spaceship = Spaceship.new
@@ -31,5 +56,6 @@ class SpaceshipsController < ApplicationController
   def spaceship_params
     params.require(:spaceship).permit(:name, :number_of_seats, :speed, :price, :description, :photo)
   end
+
 
 end

@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  position: relative;
+  position: absolute;
   justify-content: center;
   bottom: 0;
   height: 50px;
@@ -8,7 +8,7 @@
   color: white;
   text-align: center;
   background-color: $space-grblue;
-  margin-top: 55px;
+  margin-top: 100px;
 }
 
 .list-inline-spatial {
