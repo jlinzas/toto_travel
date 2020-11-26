@@ -2,21 +2,16 @@
 <h1>La vie est belle avec Toto travel</h1>
 <p>La garantie d'arriver à bon spatioport</p>
 <h2>Nous n'attendions plus que vous...</h2>
-<form>
-  <div class="form-row">
-    <p></p>
-    <div class="col-7">
-      <input type="text" class="form-control" placeholder="Date de">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Spatioport">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
-    </div>
-  </div>
-</form>
+<div class="container">
+<%= simple_form_for :query, url: spaceships_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :name, input_html: {value: ""}, id: "name" %>
+  <%= f.input :price, collection: ["€","€€","€€€"], label: "Prix" , html_input: "required", input_html: {value: ""}, id: "price" %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
+</div>
 <h2><%= link_to "Proposez son vaisseau", new_spaceship_path %></h2>
+<br>
+<br>
 </div>
 <div class="container">
   <div class="cards">
