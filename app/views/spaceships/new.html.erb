@@ -1,11 +1,13 @@
-<h1>Ajoutez votre vaisseau</h1>
+<h1>Ajoutez votre vaisseau, générer des kryptons</h1>
+<div class="formulaire-new">
 <%= simple_form_for [ @spaceship ] do |f| %>
 
-  <%= f.input :name, label: "Name" %>
-  <%= f.input :speed, label: "Speed" %>
-  <%= f.input :number_of_seats, label: "Number of seats" %>
-  <%= f.input :price, label: "Price" %>
+  <%= f.input :name, label:"Nom du Vaisseau" %>
+  <%= f.input :speed, label:"Vitesse moyenne" %>
+  <%= f.input :number_of_seats, label: "Nombre de sièges" %>
+  <%= f.input :price, label: "Prix" %>
   <%= f.input :description, label: "Description" %>
   <%= f.input :photo, as: :file %>
   <%= f.submit "Submit !", class: "btn btn-primary" %>
 <% end %>
+</div>
