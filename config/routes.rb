@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :spaceships
-  devise_for :users
+    devise_for :users
   resources :users, only: [:show] do
     resources :orders, only: [:new, :create]
   end

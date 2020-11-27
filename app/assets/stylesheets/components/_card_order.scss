@@ -38,7 +38,7 @@
 
 .juju-cards {
   display: grid;
-  justify-content: left;
+  justify-content: center;
 }
 
 .juju-card {
@@ -65,4 +65,5 @@
   width: 50%;
   margin: 10px;
   color: white;
+  line-height: normal;
 }
