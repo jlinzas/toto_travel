@@ -1,43 +1,25 @@
-<div class="container-index">
+<div class="container-index-home">
 <h1>Bienvenue sur Toto Travel</h1>
 <p>L'agence de location de vaisseaux avec 1500ans d'avance...</p>
-<!--<%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>  -->
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <h2>Que diriez-vous de quitter la planète ?</h2>
 
-<form>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="City">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="State">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Zip">
-    </div>
-  </div>
-</form>
-</div>
-<br>
-<br>
-<br>
 
-<div class="container">
-  <div class="cards">
-    <% @spaceships.each do |spaceship| %>
-      <%= link_to spaceship_path(spaceship) do %>
-        <div class="card" style="background-image: <% if spaceship.photo.attached? %>
-          url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :fill %>')
-          <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
-          <% end %>">
-                    <div class="card-body">
-            <h5 class="card-title"><%= spaceship.name %></h5>
-            <p class="card-text"><%= spaceship.description %>.</p>
-            <p class="card-price"><%= spaceship.price %>.</p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
+<%= link_to spaceships_path, class: "nav-link" do %>
+    <div class="btn btn-primary-big">Let's Go !</div>
+<% end  %>
 </div>
+
+<div class="container-home">
+    <div class="card-user-profil">
+      <p>"Préparez votre baluchon, on part sur Pluton !<br>
+      Envie de changer d'air ? Destination Jupiter.<br>
+      La vie est trop dure ? Cap sur Mercure. <br>
+      Ça vous casse les burnes ? Allez sur Saturne !"</p>
+      <p class="text-right"> Commandant Jean-Loup Peres</p>
+    </div>
+  </div>
