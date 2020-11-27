@@ -11,7 +11,7 @@ class OrdersController < ApplicationController
     @order.spaceship = @spaceship
     @order.user = current_user
     if @order.save
-      redirect_to user_path(current_user), notice: "Reserved"
+      redirect_to user_path(current_user), notice: "Reservé. Merci de votre confiance."
     else
       render :new
     end
