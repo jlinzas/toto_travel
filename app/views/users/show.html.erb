@@ -7,21 +7,23 @@
     <div class="card-user-profil">
       <h3>Vos informations capitales :</h3>
       <p>Cyber adresse : <%= @user.email %></p>
-      <p>Cyber adresse : <%= @user.email %></p>
-      <p>Cyber adresse : <%= @user.email %></p>
+      <p>Prénom : <%= @user.first_name %></p>
+      <p>Nom : <%= @user.last_name %></p>
+      <p>Adresse : <%= @user.address %></p>
     </div>
   </div>
 <br>
-<h2>Vos reservations :</h2>
+<h2 class="text-center">Vos reservations :</h2>
 <br>
 <div class="juju-cards">
   <% @user.orders.each do |order| %>
     <div class="juju-card">
       <div class="juju-body">
-        <h4>Commandé par: User.name</h4>
-        <%= @user.email %>
         <h3>Commande n°<%= order.id %></h3>
+        <br>
+        <h4>Vaisseau reservé : <%= order.spaceship.name %></h4>
         <p>Reservé le <%= order.created_at %></p>
+        <p>Montant : <%= order.spaceship.price %> € </p>
         <p>Du : <%= order.start_date %> au : <%= order.end_date %></p>
       </div>
       <div class="juju-img" style="background-image: url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')">

@@ -42,7 +42,7 @@
         <% unless spaceship.orders.blank? %>
           <% unless spaceship.orders[0][:start_date].nil? %>
             <% if params[:search][:start_date] > spaceship.orders[0][:end_date] || params[:search][:end_date] < spaceship.orders[0][:start_date]%>
-              <%= link_to spaceship_path(spaceship) do %>
+              <%= link_to spaceship_path(spaceship, :start_date => params[:search][:start_date], :end_date => params[:search][:end_date]) do %>
                 <div class="card" style="background-image: <% if spaceship.photo.attached? %>
                   url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :scale %>')
                   <% else %> url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')
@@ -63,7 +63,6 @@
   <div class="container">
     <div class="cards">
       <% @spaceships.each do |spaceship| %>
-        <% if spaceship.orders.blank? %>
           <%= link_to spaceship_path(spaceship) do %>
             <div class="card" style="background-image: <% if spaceship.photo.attached? %>
               url('<%= cl_image_path spaceship.photo.key, height: 300, width: 400, crop: :scale %>')
@@ -74,7 +73,6 @@
               <h5 class="card-title"><%= spaceship.name %></h5>
             </div>
           <% end %>
-        <% end %>
       <% end %>
     </div>
   </div>

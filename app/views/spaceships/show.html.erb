@@ -17,10 +17,22 @@
 
 
 <div class="container show_bottom">
+  <% unless @spaceship.orders.blank? %>
+    <% @spaceship.orders.each do |order| %>
+      <p>Du : <br> <%= order.start_date %></p>
+      <p>Au : <br> <%= order.end_date %></p>
+    <% end %>
+  <% end %>
   <div class="container-show-description">
     <div class="card-show-description"><h3>Description:</h3>
       <p><%= @spaceship.description %></p>
   </div>
+  <% if params[:start_date] %>
+  <div>
+  <p>Du : <br> <%= params[:start_date] %></p>
+  <p>Au : <br> <%= params[:end_date] %></p>
+  </div>
+  <% end %>
   <div class="btn-reservation">
   <%= link_to "Reservez votre vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id, :start_date => params[:start_date], :end_date => params[:end_date]), :method => :post, class: "btn-reservation" %>  </div>
   </div>
