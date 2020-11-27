@@ -27,6 +27,7 @@
     <div class="card-show-description"><h3>Description:</h3>
       <p><%= @spaceship.description %></p>
   </div>
+</div>
   <% if params[:start_date] %>
   <div>
   <p>Du : <br> <%= params[:start_date] %></p>
@@ -36,5 +37,3 @@
   <div class="btn-reservation">
   <%= link_to "Reservez votre vaisseau", user_orders_path(:spaceship => @spaceship.id, :user_id => current_user.id, :start_date => params[:start_date], :end_date => params[:end_date]), :method => :post, class: "btn-reservation" %>  </div>
   </div>
-</div>
-

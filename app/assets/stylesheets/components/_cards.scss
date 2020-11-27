@@ -6,7 +6,7 @@
   background-clip: border-box;
   height: 300px;
   width: 400px;
-  border-radius: 2px;
+  border-radius: 20px 20px 0 0;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0);
@@ -14,13 +14,13 @@
   color: white;
 }
 .card:hover {
-  border: solid #0cac695b 2px;
+  box-shadow: 0px 0px 20px #2299e2;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 60px;
 }
 
 .cards-show {
@@ -102,8 +102,18 @@
 
 .card-body {
   display: flex;
+  display: inline-block;
   width: 100%;
   justify-content: center;
+  border-radius: 0 0 20px 20px;
+  background-color: rgba(250, 250, 250, 0.1);
+}
+
+.card-body a {
+  text-decoration: none;
+  &:hover {
+   text-decoration: none;
+  }
 }
 
 // Smallest device

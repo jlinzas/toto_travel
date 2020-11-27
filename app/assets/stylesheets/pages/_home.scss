@@ -14,7 +14,7 @@ body {
 h1 {
   font-weight: lighter;
   text-transform: uppercase;
-  animation: 10s neon 1s linear infinite;
+  animation: 2s neon 1s linear infinite;
   color: $light-gray;
   transition: 1s ease;
   margin-top: 50px;
@@ -30,12 +30,13 @@ h2 {
     text-decoration: none;
     opacity: 0.7;
     transition: 1s ease;
+    font-size: 40px;
   }
 }
 
 h2 a:hover {
   color: white;
-  text-shadow: 0px 0px 20px blue;
+  text-shadow: 0px 0px 20px #2299e2;
   text-decoration: none;
   opacity: 1;
   transition: 1s ease;
