@@ -1,6 +1,7 @@
 class SpaceshipsController < ApplicationController
 
   def index
+    
     if params[:query].present?
 
       if params[:query][:name].present?

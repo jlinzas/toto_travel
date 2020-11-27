@@ -14,26 +14,21 @@
 <br>
 <h2>Vos reservations :</h2>
 <br>
-<% @user.orders.each do |order| %>
-<h3>Commande n°<%= order.id %></h3>
-<p>Reserved at <%= order.created_at %></p>
-<p>- - - - - - - -</p>
+<div class="juju-cards">
+  <% @user.orders.each do |order| %>
+    <div class="juju-card">
+      <div class="juju-body">
+        <h4>Commandé par: User.name</h4>
+        <%= @user.email %>
+        <h3>Commande n°<%= order.id %></h3>
+        <p>Reservé le <%= order.created_at %></p>
+        <p>Du : <%= order.start_date %> au : <%= order.end_date %></p>
+      </div>
+      <div class="juju-img" style="background-image: url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')">
+      </div>
+    </div>
 <% end %>
+</div>
 
-// à partir d'ici c'est Paulo
 
-  <div class="card-order-content">
-    <div class="card-order-content-title">
-      <h4>Ordered by: User.name</h4>
-      <%= @user.email %>
-      <% @user.orders.each do |order| %>
-      <br>
-      <p>Order n°<%= order.id %></p>
-      <br>
-      <p>Order created at <%= order.created_at %></p>
-      <% end %>
-    </div>
-    <div class="class-order-content-img" style="background-image: url('https://images.unsplash.com/photo-1565185777274-32ee0b467c41?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')">
-    </div>
-  </div>
 </div>

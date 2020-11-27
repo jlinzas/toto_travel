@@ -1,37 +1,65 @@
-.card-order-content {
-  position: relative;
-  display: flex;
-  color: white;
-  height: 300px;
-  width: 700px;
-  border-radius: 2px;
-  background-color: rgba(255, 255, 255, 0);
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  margin-top: 50px;
+// .card-order-content {
+//   position: relative;
+//   display: flex;
+//   color: white;
+//   height: 300px;
+//   width: 700px;
+//   border-radius: 2px;
+//   background-color: rgba(255, 255, 255, 0);
+//   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+//   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+//   margin-top: 50px;
+// }
+
+// .card-order-content:hover {
+//   border: solid #0cac695b 2px;
+// }
+
+// .class-order-content-img {
+//   position: relative;
+//   display: flex;
+//   justify-content: space-around;
+//   right: 0%;
+//   height: 100%;
+//   width: 50%;
+//   background-size: cover;
+// }
+
+// .card-order-content-title {
+//   position: relative;
+//   left: 0%;
+//   display: flex;
+//   display: inline-block;
+//   align-content: flex-start;
+//   height: 100%;
+//   width: 50%;
+//   background-size: auto;
+// }
+
+.juju-cards {
+  display: grid;
+  justify-content: left;
 }
 
-.card-order-content:hover {
-  border: solid #0cac695b 2px;
-}
-
-.class-order-content-img {
-  position: relative;
+.juju-card {
   display: flex;
-  justify-content: space-around;
-  right: 0%;
   height: 100%;
-  width: 50%;
+  width: 100%;
+  margin: 10px;
+}
+
+.juju-img {
   background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 300px;
+  margin: 10px;
+  border-radius: 2px;
 }
 
-.card-order-content-title {
-  position: relative;
-  left: 0%;
-  display: flex;
-  display: inline-block;
-  align-content: flex-start;
+.juju-body {
   height: 100%;
   width: 50%;
-  background-size: auto;
+  margin: 10px;
+  color: white;
 }
